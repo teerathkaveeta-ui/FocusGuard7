@@ -1,0 +1,17 @@
+/ (root)
+├── .github/workflows/android.yml  <-- Build Workflow
+├── lib/main.dart                  <-- Flutter UI
+├── android/
+│   ├── build.gradle               <-- Project Build File
+│   ├── settings.gradle            <-- Project Settings
+│   ├── gradle.properties          <-- Gradle Config
+│   ├── app/
+│   │   ├── build.gradle           <-- App Build File
+│   │   └── src/main/
+│   │       ├── AndroidManifest.xml
+│   │       └── java/com/focusguard/app/
+│   │           ├── MainActivity.java
+│   │           └── FocusVpnService.java
+│   └── gradle/wrapper/
+│       └── gradle-wrapper.properties <-- Gradle Version
+└── pubspec.yaml                   <-- Flutter Config
