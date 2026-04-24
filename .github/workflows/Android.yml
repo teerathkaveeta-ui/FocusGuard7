@@ -26,15 +26,22 @@ jobs:
           channel: 'stable'
 
       - name: Install dependencies
+        working-directory: flutter-project
         run: flutter pub get
 
       - name: Grant execute permission for gradlew
-        # Correct path to gradlew inside the android folder
-        run: chmod +x android/gradlew
+        working-directory: flutter-project/android
+        run: chmod +x gradlew
 
       - name: Build APK
+        working-directory: flutter-project
         run: flutter build apk --release
 
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: flutter-project/build/app/outputs/flutter-apk/app-release.apk
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
