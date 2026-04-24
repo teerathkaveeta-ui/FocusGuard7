@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F8FAFC">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_lock_idle_alarm"
+        android:contentDescription="Icon"
+        android:tint="#3F51B5" />
+
+    <TextView
+        android:id="@+id/statusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FocusGuard Pro ⚔️"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/limitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Limit: 30 Minutes"
+        android:textSize="18sp"
+        android:textColor="#64748B"
+        android:layout_marginTop="32dp"/>
+
+    <SeekBar
+        android:id="@+id/minutesSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="120"
+        android:progress="30"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="START MONITORING"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="48dp"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Social network apps (FB, IG, YT) will block automatically once limit is reached."
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textColor="#94A3B8"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>
